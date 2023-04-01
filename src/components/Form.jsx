@@ -6,13 +6,16 @@ const Form = () => {
   const handleSubmit = (e) => {};
   return (
     <section className='container'>
+      <h4>color generator</h4>
       <form onSubmit={handleSubmit} className='color-form'>
-        <h4>color generator</h4>
-
+        <input
+          type='color'
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+          style={{ marginRight: '1.25rem' }}
+        />
         <input
           type='text'
-          name='color'
-          id='color'
           value={color}
           onChange={(e) => setColor(e.target.value)}
           placeholder='#3c3799'
